@@ -63,7 +63,7 @@ nav ul li a{
 main{
     display:flex;
     align-items:center;
-    margin-top:60px;
+    margin-top:30px;
 }
 main .main-text{
     width:50%;
@@ -84,7 +84,7 @@ main .main-text h1 b{
 }
 main .main-text p{
     color:black;
-    margin: 20px 0 40px;
+    margin: 10px 0 40px;
     width:90%;
 }
 
@@ -101,7 +101,7 @@ main .main-text button{
     transition: all .5s;
 }
 main .main-text button:hover{
-    transform: scale(1.2)
+    transform: scale(1.1)
 }
 
 main .main-img{
@@ -119,7 +119,7 @@ main .main-img img{
         position:fixed;
         top:0;
         left:0;
-        background-color: rgba(0, 0, 0, 0.818);
+        background-color: rgba(0, 0, 0, 0.863);
         flex-direction:column;
         justify-content:center;
         height:100%;
@@ -158,6 +158,10 @@ main .main-img img{
     main .main-img{
         margin-top:70px;
         width:100%;
+    }
+
+    main .main-text button:hover{
+        transform: scale(1.3)
     }
 }
 
