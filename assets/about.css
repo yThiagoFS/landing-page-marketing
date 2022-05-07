@@ -1,3 +1,7 @@
+body{
+    overflow-y: hidden;
+    height:100%;
+}
 .about-container{
     width:50%;
     height:100%;
@@ -5,6 +9,7 @@
     left:50%;
     top:-50px;
     transform:translate(-50%, 0%);
+    
 }
 .about-title{
     text-align: center;
@@ -37,3 +42,220 @@
     line-height:1.3em;
     height:50%;
 }
+.triggers__container{
+    left:100px;
+    top:114px;
+    position:absolute;
+    width:90%;
+    height:80%;
+    
+    z-index:0;
+}
+
+
+.mission__container{
+    position:relative;
+    left:10%;
+    top:5%;
+    max-width:300px;
+    width:100%;
+    height:auto;
+    z-index:2;
+}
+.vision__container{
+    position:absolute;
+    right:10%;
+    top:5%;
+    max-width:300px;
+    width:100%;
+    height:auto;
+    z-index:2;
+}
+.value__container{
+    position:absolute;
+    left:10%;
+    top:60%;
+    max-width:300px;
+    width:100%;
+    height:auto;
+    z-index:2;
+}
+
+.mission__container .mission__wrapper,
+.vision__container .vision__wrapper,
+.value__container .value__wrapprer{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:3;
+    min-height:260px;
+    height:100%;
+    
+}
+.mission__container .mission__input, 
+.vision__container .vision__input,
+.value__container .value__input{
+    display:none;
+}
+
+.mission__wrapper .mission__title,
+.vision__wrapper .vision__title,
+.value__wrapper .value__title{
+    text-align:center;
+    font-variant:small-caps;
+    position:absolute;
+    top:3%;
+    left:50%;
+    transform:translateX(-50%);
+    transition: 0.5s;
+}
+.mission__title:hover, .vision__title:hover, .value__title:hover{
+    color: #ffffff;
+}
+.mission__wrapper .mission__title::after,
+.vision__wrapper .vision__title::after,
+.value__wrapper .value__title::after{
+    position:absolute;
+    right:-30%;
+    top:-4%;
+    content:'+';
+    float:right;
+    font-size:30px;
+    animation: spinning 7s infinite linear;
+    
+}
+.mission__wrapper .mission__content,
+.vision__wrapper .vision__content,
+.value__wrapper .value__content{
+    max-width:70%;
+    margin-top:20px;
+    text-align:center;
+    line-height:1.3em;
+    height:50%;
+    opacity:0;
+    user-select:none;
+}
+.value__wrapper .value__content {
+    list-style-type: disc;
+    margin: 40px 110px 0px 110px;
+}
+.value__wrapper .value__content li{
+    margin-right:90px;
+}
+
+.mission__wrapper > label,
+.vision__wrapper > label,
+.value__wrapper > label{
+    user-select:none;
+    cursor:pointer;
+    width:100%;
+}
+
+.mission__input:checked + .mission__wrapper .mission__content,
+.vision__input:checked + .vision__wrapper .vision__content,
+.value__input:checked + .value__wrapper .value__content{
+    animation: opacity 2s ease;
+    animation-fill-mode: forwards; 
+}
+
+.mission__input:checked + .mission__wrapper .mission__title::after,
+.vision__input:checked + .vision__wrapper .vision__title::after,
+.value__input:checked + .value__wrapper .value__title::after{
+    animation: spinning 7s infinite linear reverse;
+}
+
+
+
+@media (max-width:1276px){
+    body{
+        overflow-y:scroll;
+        min-height:100vh;
+    }
+
+    main{
+        display:flex;
+        align-content:center;
+        flex-direction:column;
+        
+    }
+    .about-container{
+        width:100%;
+        height:100%;
+        position:relative;
+       
+    }
+    .text-container{
+        width:100%;
+    }
+    
+    .triggers__container{
+        width:40%;
+        min-height:100vh;
+        
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        top:0;
+    }
+    .mission__container{
+        position:relative;
+        max-width:300px;
+        width:100%;
+        top:0;
+        left:0;
+        right:0;
+       
+    }
+    .vision__container{
+        position:relative;
+        max-width:300px;
+        width:100%;
+        top:0;
+        left:0;
+        right:0;
+        
+    }
+    .value__container{
+        position:relative;
+        max-width:300px;
+        width:100%;
+        top:0;
+        left:0;
+        right:0;
+        
+    }
+}
+
+
+@keyframes spinning {
+
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    0%{
+        transform: rotate(0deg);
+    }
+
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity:1
+    }
+}
+
