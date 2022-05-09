@@ -8,7 +8,7 @@
 }
 body{
     min-height:100vh;
-    background-image: linear-gradient(134deg, #fcc6c6, 45%, white)
+    background-image: linear-gradient(134deg, rgb(39,190,220), 45%, white)
     
 }
 
@@ -125,7 +125,6 @@ main .main-img{
 }
 main .main-img img{
     width:100%;
-    
 }
 
 @media (max-width: 850px){
@@ -210,7 +209,7 @@ main .main-img img{
         background: black;
         transition: .9s;
     }
-    nav .menuHamburguer.menuHamburguer.active{
+    nav .menuHamburguer.active{
         transition: 1s;
         transform: rotate(45deg);
     }
@@ -237,3 +236,4 @@ main .main-img img{
         font-size:2rem;
     }
 }
+
