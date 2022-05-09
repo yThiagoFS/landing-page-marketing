@@ -7,7 +7,9 @@
 body{
     height:100%;
     width:100%;
-    background-image: linear-gradient(134deg, rgb(39,190,220), 45%, white)
+    background-image: linear-gradient(134deg, rgb(39,190,220), 45%, white);
+    background-repeat:no-repeat;
+    
 }
 
 
@@ -76,27 +78,10 @@ nav .menuHamburguer{
 }
 .s1{
     width:100%;
-    height:100vh;
-    background-color:aqua;
-}
-.container__wrapper{
-    height:100%;
-    width:100%;
-    background-color:rgb(50,195,210,.6);
-    position:relative;
-    
+    height:20vh;
+    background-color:transparent;
 }
 
-.container__products{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:100%;
-    height:100%;
-    background-color:#e0dddd;
-    
-}
 .container__products>h1{
     text-align:center;
     font-size:2em;
